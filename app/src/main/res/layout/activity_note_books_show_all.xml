@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    tools:context=".activities.NoteBooksShowAll">
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/edit_text_shape"
+        android:drawableLeft="@drawable/searchicon"
+        android:hint="Search"
+        android:inputType="text"
+        android:textColorHint="#8E8E93"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:id="@+id/backSpace"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="OnClickBackFromNotebooksToHome"
+        android:src="@drawable/backspacepurple" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:text="Notebooks"
+        android:textColor="#000000"
+        android:textSize="34sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_all_notebooks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_edit_text"
+        android:layout_margin="16dp"
+        android:layout_marginTop="250dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_show_notebooks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/plusss"
+        android:backgroundTint="#3D0F54"
+        android:onClick="onFabClicked_showAllNoteBooks"
+        android:src="@drawable/fab_plus"
+        app:elevation="20dp"
+        app:fabSize="normal" />
+</RelativeLayout>
